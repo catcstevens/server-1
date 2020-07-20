@@ -1,6 +1,4 @@
-    
-    
-    {
+    { "1": {
 		"child_name": "Arabella",
 		"username": "user1",
 		"address": "123 Gorgeous Street",
@@ -10,7 +8,7 @@
 		"country": "Germany",
         "continent": "Europe",
         "teeth": "1",
-		"currency": "Euro",
+		"currency": "Euro"
     },
     {
 		"child_name": "Chuck",
@@ -22,7 +20,7 @@
 		"country": "Canada",
         "continent": "North America",
         "teeth": "1",
-		"currency": "CAD",
+		"currency": "CAD"
     },
     {
 		"child_name": "Biyu",
@@ -34,7 +32,7 @@
 		"country": "China",
         "continent": "Asia",
         "teeth": "1",
-		"currency": "Yuan",
+		"currency": "Yuan"
     },
     {
 		"child_name": "Golnessa",
@@ -46,7 +44,7 @@
 		"country": "Iran",
         "continent": "Asia",
         "teeth": "1",
-		"currency": "Rial",
+		"currency": "Rial"
     },
     {
 		"child_name": "Aleksander",
@@ -58,7 +56,7 @@
 		"country": "Russia",
         "continent": "Europe",
         "teeth": "1",
-		"currency": "Rouble",
+		"currency": "Rouble"
     },
     {
 		"child_name": "Vanshika",
@@ -70,7 +68,7 @@
 		"country": "India",
         "continent": "Asia",
         "teeth": "1",
-		"currency": "Rupee",
+		"currency": "Rupee"
     },
     {
 		"child_name": "Luciana",
@@ -82,7 +80,7 @@
 		"country": "Argentina",
         "continent": "South America",
         "teeth": "1",
-		"currency": "Peso",
+		"currency": "Peso"
 	},
 	{
 		"child_name": "Usman",
@@ -94,7 +92,7 @@
 		"country": "Nigeria",
         "continent": "Africa",
         "teeth": "1",
-		"currency": "Naira",
+		"currency": "Naira"
 	},
 	{
 		"child_name": "Cooper",
@@ -106,7 +104,7 @@
 		"country": "Australia",
         "continent": "Oceana",
         "teeth": "1",
-		"currency": "AUD",
+		"currency": "AUD"
 	},
 	{
 		"child_name": "Kai",
@@ -118,7 +116,7 @@
 		"country": "Japan",
         "continent": "Asia",
         "teeth": "1",
-		"currency": "Yen",
+		"currency": "Yen"
 	},
 	{
 		"childs_name": "Thembi",
@@ -130,7 +128,7 @@
 		"country": "South Africa",
         "continent": "Africa",
         "teeth": "2",
-		"currency": "Rand",
+		"currency": "Rand"
 	},
 	{
 		"childs_name": "Claudia",
@@ -142,6 +140,8 @@
 		"country": "France",
         "continent": "Europe",
         "teeth": "1",
-		"currency": "Euro",
-    },
+		"currency": "Euro"
+    }
+}
+
 
