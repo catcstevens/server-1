@@ -5,7 +5,13 @@ const {
 	deleteBooking,
 	updateBooking,
 	getContinent,
+	archiveBooking,
 } = require('../utils/bookings_utilities');
+
+const Agenda = require('agenda');
+const mongoConnectionString = 'mongodb://127.0.0.1/agenda';
+const agenda = new Agenda({db: {address: mongoConnectionString}});
+const jobTypes = process.env.JOB_TYPES ? process.env.JOB_TYPES.split(',') : [];
 
 const getBookings = (req, res) => {
 	getAllBookings(req)
@@ -100,6 +106,27 @@ const userAuthenticated = (req, res, next) => {
 	}
 };
 
+jobTypes.forEach(type => {
+	require('./jobs/' + type)(agenda);
+  });
+  
+  if (jobTypes.length) {
+	agenda.start(); // Returns a promise, which should be handled appropriately
+  }
+  
+const archiveBookings = (req, res) => {
+	archiveBooking(req).exec((error, booking) => {
+		if (error) {
+			res.status(500);
+			return res.json({
+				error: error.message,
+			});
+		}
+		res.status(200);
+		res.send(booking);
+	});
+};
+
 
 
 module.exports = {
@@ -109,5 +136,7 @@ module.exports = {
 	changeBooking,
 	removeBooking,
 	userAuthenticated,
-	getBookingsByContinent
+	getBookingsByContinent,
+	archiveBookings,
+	agenda
 };

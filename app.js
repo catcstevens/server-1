@@ -37,7 +37,8 @@ if (process.env.NODE_ENV !== 'production') {
 
 const databaseConnection =
 	process.env.MONGODB_URI || 'mongodb://localhost/tooth_inc';
-
+	
+	
 mongoose.connect(
 	databaseConnection,
 	{

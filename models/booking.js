@@ -76,4 +76,10 @@ Booking.statics.findByContinent = function (continent) {
 	});
 };
 
+Booking.statics.findByDate = function (modified_date) {
+	return this.find({
+		modified_date: modified_date,
+	})
+}
+
 module.exports = mongoose.model('Booking', Booking);
