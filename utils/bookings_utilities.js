@@ -1,7 +1,6 @@
 const Booking = require('../models/booking');
 
-const mongoConnectionString = 'mongodb://127.0.0.1/agenda';
-const agenda = new Agenda({db: {address: mongoConnectionString}});
+
 const getAllBookings = (req) => {
 	console.log('user: ', req.user.username);
 	if (req.user.admin) {
@@ -45,11 +44,9 @@ function updateBooking(req) {
 function archiveBooking(req) {
 	if (Booking.modified_date < Booking.getLastModifiedDate)
 	return Booking.findByDate(req.params.modified_date, req.body, {
-		open_status: false,
+		open_status: true,
 	});
 }
-
-
 
 module.exports = {
 	getAllBookings,
@@ -58,4 +55,5 @@ module.exports = {
 	deleteBooking,
 	updateBooking,
 	getContinent,
+	archiveBooking,
 };

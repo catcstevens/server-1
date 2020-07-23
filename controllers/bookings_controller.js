@@ -8,11 +8,6 @@ const {
 	archiveBooking,
 } = require('../utils/bookings_utilities');
 
-const Agenda = require('agenda');
-const mongoConnectionString = 'mongodb://127.0.0.1/agenda';
-const agenda = new Agenda({db: {address: mongoConnectionString}});
-const jobTypes = process.env.JOB_TYPES ? process.env.JOB_TYPES.split(',') : [];
-
 const getBookings = (req, res) => {
 	getAllBookings(req)
 		.sort({
@@ -138,5 +133,4 @@ module.exports = {
 	userAuthenticated,
 	getBookingsByContinent,
 	archiveBookings,
-	agenda
 };

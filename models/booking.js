@@ -76,9 +76,9 @@ Booking.statics.findByContinent = function (continent) {
 	});
 };
 
-Booking.statics.findByDate = function (modified_date) {
+Booking.statics.findByDate = function (getLastModified_date) {
 	return this.find({
-		modified_date: modified_date,
+		modified_date: getLastModified_date,
 	})
 }
 
